@@ -1,15 +1,17 @@
-.font{
+.fond{
     position: absolute;
     padding-top: 85px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
     background-color: #00506b;
+
 }
+
 .style_prevu_kit{
     display: inline-block;
-    border: 0;
+    border:0;
     width: 196px;
     height: 210px;
     position: relative;
@@ -18,9 +20,10 @@
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1);
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale3d(1.5);
+    -moz-transform: scale(1);
     transition: all 200ms ease-in;
     transform: scale(1);
+
 }
 
 .style_prevu_kit:hover{
@@ -31,7 +34,8 @@
     -ms-transition: all 200ms ease-in;
     -ms-transform: scale(1.5);
     -moz-transition: all 200ms ease-in;
-    -moz-transform: scale3d(1.5);
+    -moz-transform: scale(1.5);
     transition: all 200ms ease-in;
     transform: scale(1.5);
+
 }
