@@ -1,0 +1,72 @@
+/*
+vamos acrear una animacion apartir de frame, y las vamos a hacer girar 
+alternar y transformar 
+*/
+
+
+@keyframes animacion_test{
+    from{
+        background-color: rgb(255, 38, 0);
+    }
+    to{
+        background-color: rgb(73, 50, 205);
+    }
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes label-animation{
+    from{
+        transform: rotate(0deg);
+        margin-left:0 ;
+    }
+    to{
+        transform: rotate(180deg);
+        margin-left:85vw ;
+    }
+}
+
+.label-container{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgb(50,50,50);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.loader-doble{
+    width: 64px;
+    height: 64px;
+    border: 16px solid rgb(3, 7, 255);
+    border-top: 16px solid rgb(255, 230, 0);
+    border-bottom: 16px solid rgb(45,190,10);
+    border-radius: 50%;
+    animation: girar 2s ease-in-out infinite;
+    animation-name: label-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.animada{
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 200%;
+    display: flex ;
+    justify-content: center;
+    align-items: center ;
+    animation-name: animacion_test;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}

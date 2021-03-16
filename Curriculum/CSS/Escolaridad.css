@@ -1,19 +1,50 @@
-pre, p {
-    font-size: 1.5em;
-    color: #FE7F88;
-    background-color: transparent;
+
+*{
+    padding: 10px;
+    margin: 10px;
+    color: #ffffff;
+    text-align: center;
 }
 
-div {
-  background-image: url("matrix.png");
+
+html, body{
+    background-color: white ;
+
 }
 
-p {
-  background-image: none;
+.main-container{
+    border: 2px solid rgb(250, 122, 0);
+    border-radius: 50px;
+    margin: 1rem;
+    background-color: rgb(255, 248, 248);
+
+}
+nav, section, footer, article, aside{
+    border: 2px solid rgb(240, 233, 233);
+    margin: 2rem;
+    border-radius: 20px;
+    padding: 2rem;
 }
 
-.catsandstars {
-  background-image:  url("matrix.gif"),
-                     url("matrix.png");
-  background-color: transparent;
+article, aside{
+    width: 50%;
+    display: inline-block;
+    height: 250px;
+    background-color: rgb(255, 0, 0);
+    align-items: center;
+   
+    
+}
+
+nav, section{
+    background-color: rgb(0, 255, 42);
+    
+    
+}
+footer{
+    background-color: aqua;
+}
+
+a{
+    background-color: black;
 }
