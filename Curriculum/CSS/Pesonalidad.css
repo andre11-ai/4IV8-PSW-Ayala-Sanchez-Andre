@@ -1,0 +1,156 @@
+
+
+*{
+    padding: 0;
+    margin: 0px;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+
+html, body{
+    background-color:rgba(255, 255,255,0.6) ;
+    background-image: url("matrix.png")
+
+
+
+
+    
+
+    
+}
+
+.main-container{
+    border: 10px solid rgb(0, 255, 21);
+    border-radius: 40px;
+    margin: 5rem;
+    background-color: rgb(250, 250, 250);
+
+}
+nav, section, footer, article, aside{
+    border: 2px solid rgb(115, 255, 0);
+    margin: 2rem;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+
+article, aside{
+    width: 60%;
+    display: inline-block;
+    height: 320px;
+    background-color: rgb(0, 204, 255);
+}
+
+nav, section, footer{
+    background-color: rgb(204, 12, 12);
+    text-align-last: center;
+    
+}
+
+:root{
+    --body-bg-color:#4c00ff;
+    --text-color:#3f00ec;
+    --hr-color:#237891;
+    --red:#e74c3c;
+}
+ul {
+    list-style: none;
+    align-items: center;
+}
+  
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+hr {
+    border-color: var(--hr-color);
+    margin: 20px 0;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu li {
+    margin-right: 70px;
+  }
+  
+  .menu a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .menu a span {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .menu a span:first-child {
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  .menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+  }
+  
+  .menu i {
+    font-size: 30px;
+  }
+  
+  .menu a:hover span:first-child {
+    transform: translateY(100%);
+  }
+  
+  .menu a:hover span:last-child,
+  .menu[data-animation] a:hover span:last-child {
+    transform: none;
+  }
+
+/*animaciones*/
+
+.menu[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
+  }
+  
+  .menu[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+  }
+  
+  .menu[data-animation="to-right"] a span:last-child {
+    transform: translateX(-100%);
+  }
+  
+  .menu[data-animation="to-right"] a:hover span:first-child {
+    transform: translateX(100%);
+  }
+  
+  .menu[data-animation="to-left"] a span:last-child {
+    transform: translateX(100%);
+  }
+  
+  .menu[data-animation="to-left"] a:hover span:first-child {
+    transform: translateX(-100%);
+  }
+
+
+
+
+
+
+
+
+
+
+

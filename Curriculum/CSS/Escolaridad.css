@@ -1,0 +1,19 @@
+pre, p {
+    font-size: 1.5em;
+    color: #FE7F88;
+    background-color: transparent;
+}
+
+div {
+  background-image: url("matrix.png");
+}
+
+p {
+  background-image: none;
+}
+
+.catsandstars {
+  background-image:  url("matrix.gif"),
+                     url("matrix.png");
+  background-color: transparent;
+}
