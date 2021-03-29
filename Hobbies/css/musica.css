@@ -9,7 +9,7 @@
 		background-size: 100vw 100vh;
 		background-repeat: no-repeat;
         background-color: rgb(255, 255, 255,0.5);
-        background-image: url(../img/sao-ii-background-4.jpg);
+        background-image: url(../img/musica.jpg);
 	}
 	.capa{
 		position: fixed;
@@ -177,8 +177,58 @@
     position: absolute;
     width: 76%;
     left: 10%;
-    top: 400px;
+    top: 150px;
     height: 20%;
     border:0px solid  rgb(255, 255, 255,0.5);
     border-radius: 5px;
 }
+.Ramstein{
+    position: absolute;
+    right:400px;
+    top:10px;
+    width: 200px;
+    align-content: center;
+    height: 100px;
+  }
+
+  .AC{
+    position: absolute;
+    right:200px;
+    top:10px;
+    width: 200px;
+    align-content: center;
+    height: 100px;
+  }
+  .PA{
+    position: absolute;
+    right:600px;
+    top:10px;
+    width: 200px;
+    align-content: center;
+    height: 100px;
+  }
+  .SY{
+    position: absolute;
+    right:10px;
+    top:10px;
+    width: 200px;
+    align-content: center;
+    height: 100px;
+  }
+  .QU{
+    position: absolute;
+    right:800px;
+    top:10px;
+    width: 200px;
+    align-content: center;
+    height: 100px;
+  }
+
+  .pink{
+    position: absolute;
+    right:100px;
+    top:100px;
+    width: 500px;
+    align-content: center;
+    height: 100px;
+  }
