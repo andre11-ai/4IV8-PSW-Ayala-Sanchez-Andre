@@ -231,4 +231,24 @@
     width: 500px;
     align-content: center;
     height: 100px;
+    
+  }
+
+  .audio{
+    margin-bottom: 1rem;
+    position: absolute;
+    right:625px;
+    top:150px;
+    width: 250px;
+    align-content: center;
+    height: 100px;
+  }
+  .audio1{
+    margin-bottom: 1rem;
+    position: absolute;
+    right:350px;
+    top:150px;
+    width: 250px;
+    align-content: center;
+    height: 100px;
   }
