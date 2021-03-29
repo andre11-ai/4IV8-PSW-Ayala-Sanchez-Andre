@@ -252,3 +252,32 @@
     align-content: center;
     height: 100px;
   }
+  .audio2{
+    margin-bottom: 1rem;
+    position: absolute;
+    right:95px;
+    top:150px;
+    width: 250px;
+    align-content: center;
+    height: 100px;
+  }
+
+  .audio3{
+    margin-bottom: 1rem;
+    position: absolute;
+    right:-150px;
+    top:150px;
+    width: 250px;
+    align-content: center;
+    height: 100px;
+  }
+  .audio4{
+    margin-bottom: 1rem;
+    position: absolute;
+    right:200px;
+    top:210px;
+    width: 250px;
+    align-content: center;
+    height: 100px;
+  }
+
