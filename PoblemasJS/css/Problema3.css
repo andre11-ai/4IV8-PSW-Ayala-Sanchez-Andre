@@ -97,7 +97,7 @@
 	.cont-menu nav a{
 		display: block;
 		text-decoration: none;
-		padding: 20px;
+		padding: 10px;
 		color: #ffffff;
 		border-left: 5px solid transparent;
 		transition: all 400ms ease;

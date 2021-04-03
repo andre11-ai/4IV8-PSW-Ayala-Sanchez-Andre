@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Menù</title>
-	<link rel="stylesheet" href="css/Problema4.css">
-    <script src="js/Problema4.js"></script>
+	<link rel="stylesheet" href="./css/Problema9.css">
+    <script src="js/Problema9.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -35,12 +35,12 @@
             <a href="Problema1.html">Problema 1</a>
             <a href="Problema2.html">Problema 2</a>
             <a href="Problema3.html">Problema 3</a>
-            <a href="Menu.html">Menu</a>
+            <a href="Problema4.html">Problema 4</a>
             <a href="Problema5.html">Problema 5</a>
             <a href="Problema6.html">Problema 6</a>
             <a href="Problema7.html">Problema 7</a>
             <a href="Problema8.html">Problema 8</a>
-            <a href="Problema9.html">Problema 9</a>
+            <a href="Menu.html">Menu</a>
             <a href="Problema10.html">Problema 10</a>
 		</nav>
 		<label for="btn-menu">✖️</label>
@@ -56,77 +56,51 @@
         <div class="texto" style="color:white";>
             <div class="box"> 
                 <p class="text">
-                    4) Un alumno desea saber cual sera su calificacion final en la materia de algoritmos.
-                    Dicha calificacion se compone de los siguientes porcentajes:
-                    55% del promedio de sus tres calificaciones parciales 
-                    30% de las calificacion del examen final 
-                    15% de la calificacion de un trabajo final
-                </p>
+                    9) Determinar la cantidad de dinero que recibirá un trabajador por concepto de las horas extras trabajadas en una empresa, 
+                    sabiendo que cuando las horas de trabajp exceden de 40, el resto se consideran horas extra y que estas se pagan al doble 
+                    de una hora normal cuando no exceden de 8; si las horas extra exceden de 8, se pagan las primeras 8 al doble de lo que se 
+                    pagan las horas normales y el resto al triple.
+                </p> 
                 <br>
                 
          
             </div>
             <br><br><br>
             <p class="a">
-               
                 <form method="post" name="formulario">
                     <table align="center" border="1">
                         <tr>
                             <td class="td_sup">
-                            <p>Primera calificacion parcial</p>
+                                <P>Cuantas horas trabajo</P>
                             </td>
                             <td class="td_sup">
-                                <input type="text" name="par1" onkeypress="return validarn(event)">
+                                <input type="text" name="hora" onkeypress="return validarn(event)">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_inf">
-                                <p>Segunda calificacion parcial</p>
+                                <p>Cuanto le pagan por hora</p>
                             </td>
                             <td class="td_inf">
-                                <input type="text" name="par2" onkeypress="return validarn(event)">
+                                <input type="text" name="pago" onkeypress="return validarn(event)"> $
                             </td>
                         </tr>
                         <tr>
+                            <td class="td_sup"></td>
                             <td class="td_sup">
-                                <p>Tercera calificacion parcial</p>
-                            </td>
-                            <td class="td_sup">
-                                <input type="text" name="par3" onkeypress="return validarn(event)">
+                                <input type="button" value="Calcular sueldo" name="enviar" onclick="calculo()">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_inf">
-                                <p>Calificacion del examen final</p>
-                            </td>
+                                Sueldo:
                             <td class="td_inf">
-                                <input type="text" name="examen_final" onkeypress="return validarn(event)">
+                                <input type="text" name="sueldo" id="cantidad" readonly="readonly" class="input_text"> $
                             </td>
                         </tr>
                         <tr>
+                            <td class="td_sup"></td>
                             <td class="td_sup">
-                               <p>Calificacion del priyecto final</p>
-                            </td>
-                            <td class="td_sup">
-                                <input type="text" name="trabajo_final" onkeypress="return validarn(event)">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_inf"></td>
-                            <td class="td_inf">
-                                <input type="button" value="Calcular promedio" name="enviar" onclick="calculo()">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_sup">
-                                Promedio final:
-                            <td class="td_sup">
-                                <input type="text" name="promedio_final" id="cantidad" readonly="readonly" class="input_text">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_inf"></td>
-                            <td class="td_inf">
                                 <input type="button" value="Borrar" name="reset" onclick="borrar()">
                             </td>
                         </tr>

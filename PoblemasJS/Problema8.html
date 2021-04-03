@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Menù</title>
-	<link rel="stylesheet" href="css/Problema4.css">
-    <script src="js/Problema4.js"></script>
+	<link rel="stylesheet" href="./css/Problema8.css">
+    <script src="js/Problema8.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -35,11 +35,11 @@
             <a href="Problema1.html">Problema 1</a>
             <a href="Problema2.html">Problema 2</a>
             <a href="Problema3.html">Problema 3</a>
-            <a href="Menu.html">Menu</a>
+            <a href="Problema4.html">Problema4</a>
             <a href="Problema5.html">Problema 5</a>
             <a href="Problema6.html">Problema 6</a>
             <a href="Problema7.html">Problema 7</a>
-            <a href="Problema8.html">Problema 8</a>
+            <a href="Menu.html">Menu</a>
             <a href="Problema9.html">Problema 9</a>
             <a href="Problema10.html">Problema 10</a>
 		</nav>
@@ -56,12 +56,7 @@
         <div class="texto" style="color:white";>
             <div class="box"> 
                 <p class="text">
-                    4) Un alumno desea saber cual sera su calificacion final en la materia de algoritmos.
-                    Dicha calificacion se compone de los siguientes porcentajes:
-                    55% del promedio de sus tres calificaciones parciales 
-                    30% de las calificacion del examen final 
-                    15% de la calificacion de un trabajo final
-                </p>
+                   8) Lee tres numeros diferentes e imprime el numero mayoy de los tres
                 <br>
                 
          
@@ -73,55 +68,39 @@
                     <table align="center" border="1">
                         <tr>
                             <td class="td_sup">
-                            <p>Primera calificacion parcial</p>
+                                Digite el primer número:
                             </td>
                             <td class="td_sup">
-                                <input type="text" name="par1" onkeypress="return validarn(event)">
+                                <input type="text" name="num_1" onkeypress="return validarn(event)">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_inf">
-                                <p>Segunda calificacion parcial</p>
+                                Digite el segundo número:
                             </td>
                             <td class="td_inf">
-                                <input type="text" name="par2" onkeypress="return validarn(event)">
+                                <input type="text" name="num_2" onkeypress="return validarn(event)">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_sup">
-                                <p>Tercera calificacion parcial</p>
+                                Digite el tercer número:
                             </td>
                             <td class="td_sup">
-                                <input type="text" name="par3" onkeypress="return validarn(event)">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_inf">
-                                <p>Calificacion del examen final</p>
-                            </td>
-                            <td class="td_inf">
-                                <input type="text" name="examen_final" onkeypress="return validarn(event)">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td_sup">
-                               <p>Calificacion del priyecto final</p>
-                            </td>
-                            <td class="td_sup">
-                                <input type="text" name="trabajo_final" onkeypress="return validarn(event)">
+                                <input type="text" name="num_3" onkeypress="return validarn(event)">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_inf"></td>
                             <td class="td_inf">
-                                <input type="button" value="Calcular promedio" name="enviar" onclick="calculo()">
+                                <input type="button" value="Hallar al mayor" name="enviar" onclick="calculo()">
                             </td>
                         </tr>
                         <tr>
                             <td class="td_sup">
-                                Promedio final:
+                                El número mayor es:
                             <td class="td_sup">
-                                <input type="text" name="promedio_final" id="cantidad" readonly="readonly" class="input_text">
+                                <input type="text" name="final_num" id="cantidad" readonly="readonly" class="input_text">
                             </td>
                         </tr>
                         <tr>

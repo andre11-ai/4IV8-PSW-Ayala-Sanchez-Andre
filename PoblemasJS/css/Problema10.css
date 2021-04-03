@@ -83,7 +83,7 @@
 		width: 100%;
 		max-width: 250px;
 		background: #000000;
-		height: 120vh;
+		height: 100vh;
 		position: relative;
 		transition: all 500ms ease;
 		transform: translateX(-100%);
@@ -139,8 +139,7 @@
 .box {
     display: flex;
     justify-content: space-between;
-}
-
+  }
 
 .text{
     text-align: center;
@@ -148,7 +147,6 @@
 }
 
 .a{
-    
     text-align: center;
 }
   
