@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Menù</title>
+	<link rel="stylesheet" href="./css/Problema3.css">
+    <script src="js/Problema3.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				
+			</div>
+			<nav class="menu">
+				<a href="../index.html">Index</a>
+				<a href="../Curriculum/Curriculum.html">Curriculum</a>
+				<a href="../Formulario.html">Formulario</a>
+                <a href="../Hobbies/Hobbies.html">Hobbies</a>
+                <a href="../overmenucolores.html">Over Colores</a>
+				
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+            <h2 style="color: white;">Problemas</h2>
+            <a href="Problema1.html">Problema 1</a>
+            <a href="Problema2.html">Problema 2</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Problema4.html">Problema 4</a>
+            <a href="Problema5.html">Problema 5</a>
+            <a href="Problema6.html">Problema 6</a>
+            <a href="#">Problema 7</a>
+            <a href="#">Problema 8</a>
+            <a href="#">Problema 9</a>
+            <a href="#">Problema 10</a>
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+
+
+<section>
+
+
+    <article class="un">
+
+        <div class="texto" style="color:white";>
+            <div class="box"> 
+                <p class="text">
+                    3) Una tienda ofrece un descuento del 15% sobre el total de la compra 
+                    y un cliente desea saber cuanto debera pagar por su compra 
+                </p>
+                <br>
+                
+         
+            </div>
+            <br><br><br>
+            <p class="a">
+                <form method="post" name="formulario" >
+                    <table align="center" border="1" >
+                        <tr>
+                            <td class="td_sup" >Introduzca el precio neto a pagar pos su compra : $</td>
+                            <td class="td_inf" ><input type="text" name="cantidad"
+                                onkeypress="return validarn(event)" ></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="td_inf" > <input type="button" value="Descuento"
+                                name="enviar" onclick="interes()" > </td> 
+                        </tr>
+                        <tr>
+                            <td class="td_sup" >El total a pagar con el menos 15% de descuento es :</td>
+                            <td> <input type="text" name="descuento"
+                                id="cantidadi" readonly="readonly" 
+                                class="input_text" > </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> <input type="button" value="Borrar" 
+                                name="reset" onclick="borrar()" > </td>
+                        </tr>
+                    </table>
+            
+                </form>
+            </p>
+                
+
+               
+          
+        </div>
+  
+       
+    
+
+</section>
+
+
+
+
+</body>
+</html>
