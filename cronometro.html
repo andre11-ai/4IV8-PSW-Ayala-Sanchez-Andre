@@ -7,30 +7,39 @@
     <title>Cronometro</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>Cronometro</h1>
-                <p id="temporizador" class="d-flex justify-content-center
-                font-weight-bold" >0.00</p>
-            </div>
-            <div class="btn-group mb-2 d-flex
-            justify-content-center" role="group">
-               <button type="button"
-               class="btn btn-success mr-2" id="iniciar"> iniciar/parar</button>
-               <button type="button"
-               class="btn btn-success mr-2" id="resetear"> Resetear</button>
-               <button type="button"
-               class="btn btn-success mr-2" id="grabar"> Grabar</button>
-            </div>
-            <div>
 
-                <h5>Tiempos grabados</h5>
-                <div id="almacenar tiempos"></div>
+    <div class="container" >
+        <div class="row" >
+            <div class="col" >
+                <div>
+                    <h1>Cronómetro</h1>
+                    <p id="temporizador"
+                    class="d-flex justify-content-center
+                    font-weight-bold" >0.00</p>
+                </div>
+                <div class="btn-group mb-2 d-flex 
+                justify-content-center" role="group" >
+                    <button type="button"
+                    class="btn btn-success mr-2"
+                    id="iniciar" >Iniciar/Parar</button>
+                    <button type="button"
+                    class="btn btn-danger mr-2"
+                    id="resetear" >Resetear</button>
+                    <button type="button"
+                    class="btn btn-info mr-2"
+                    id="grabar" >Grabar</button>
+                </div>
+                <div>
+                    <h5>Tiempos Grabados</h5>
+                    <div id="almacenarTiempos" >
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="./JS/cronometro.js"></script>
+
+    <script src="./JS/cronometro.js" ></script>
     
 </body>
 </html>

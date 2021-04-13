@@ -1,4 +1,4 @@
-//obtener los valores que viene por parte de los diferentes
+//obtener los valores que vienen por parte de las diferentes
 //variables [id]
 
 let temporizador = document.getElementById('temporizador');
@@ -16,12 +16,12 @@ init();
 function init(){
     iniciar.addEventListener('click', iniciarContador);
     resetear.addEventListener('click', resetearContador);
-    grabar.addEventListener('click', grabarContador)
+    grabar.addEventListener('click', grabarContador);
 }
 
 function iniciarContador(){
     if(verificador == false){
-        var intervalo = setInterval(function(){
+        var intervalo = setInterval(function (){
             tiempo += 0.01;
             temporizador.innerHTML = tiempo.toFixed(2);
         }, 10);
@@ -42,12 +42,14 @@ function resetearContador(){
     }
 }
 
-function grabar(){
+
+function grabarContador(){
     if(temporizador.textContent === '0.00'){
         console.log('click para iniciar el cronometro');
     }else{
         let p = document.createElement('ul');
         p.innerHTML = `
+        
         <li> Tiempo : ${tiempo.toFixed(2)} </li>
         
         `;
