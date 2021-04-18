@@ -74,16 +74,16 @@ function problema2(){
 function problema3(){
     let Caracter = document.querySelector('#p3-input').value;
     let palabras = Caracter.split(",");
-    let palabralarga="";
+    let palabra="";
 
     for(let word of palabras){
-        if(word.length > palabralarga.length){
-        palabralarga=word;
+        if(word.length > palabra.length){
+        palabra=word;
 
-        var car = palabralarga.split("");
+        var car = palabra.split("");
         var Num = Caracter.length;
         }
     }
 
-    document.querySelector('#p3-output').textContent = 'La mas larga es : '+ palabralarga + '      caracteres:' + car + '        Num :' + Num;
+    document.querySelector('#p3-output').textContent = 'La palabra es: '+ palabra + '      caracteres:' + car + '        Num :' + Num;
 }
