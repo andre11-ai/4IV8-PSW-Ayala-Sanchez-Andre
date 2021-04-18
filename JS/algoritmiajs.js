@@ -72,5 +72,18 @@ function problema2(){
 }
 
 function problema3(){
-    alert("Ahi lo hacen tengo sueñito uwu/");
+    let Caracter = document.querySelector('#p3-input').value;
+    let palabras = Caracter.split(",");
+    let palabralarga="";
+
+    for(let word of palabras){
+        if(word.length > palabralarga.length){
+        palabralarga=word;
+
+        var car = palabralarga.split("");
+        var Num = Caracter.length;
+        }
+    }
+
+    document.querySelector('#p3-output').textContent = 'La mas larga es : '+ palabralarga + '      caracteres:' + car + '        Num :' + Num;
 }
