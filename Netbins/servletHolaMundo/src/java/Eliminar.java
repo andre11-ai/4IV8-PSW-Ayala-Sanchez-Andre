@@ -27,7 +27,7 @@ import javax.servlet.ServletConfig;
  *
  * @author demon
  */
-public class Registro extends HttpServlet {
+public class Eliminar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -90,89 +90,6 @@ public class Registro extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            
-            String nom, appat, apmat, correo, ip, iph;
-            int edad, puerto, puertoh;
-            
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            apmat = request.getParameter("appmat");
-            correo = request.getParameter("correo");
-            
-            edad = Integer.parseInt(request.getParameter("edad"));
-            
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
-            
-            iph = request.getRemoteAddr();
-            puertoh = request.getRemotePort();
-            
-            //insert into  nombre_tabla(definicion_atributo, definicion_atributo, ...);
-            //values ("valores_cadena", valores_numericos, .....);
-            
-            try{
-                
-                String q = "insert into Mregistro "
-                        + "(nom_usu, appat_usu, apmat_usu, edad_usu, correo_usu)"
-                        + "values ('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+correo+"')";
-                
-                set.executeUpdate(q);
-                
-                System.out.println("Registro exitoso");
-                
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
-                out.println("</head>");
-                out.println("<body>"
-                        + "<h1>Registro Exitosos</h1>"
-                        + "Tu nombre es: " + nom);
-                out.print("<br>"
-                        + "Tu apellido paterno es: " + appat
-                        + "<br>"
-                        + "Tu apellido materno es: " + apmat
-                        + "<br>"
-                        + "Tu edad es: " + edad
-                        + "<br>"
-                        + "Tu correo electronico es: " + correo);
-                 out.println("<br>"
-                        + "IP local :" + ip
-                        + "<br>"
-                        + "Puerto Local :" + puerto
-                        + "<br>"
-                        + "IP Remota :" +iph
-                        + "<br>"
-                        + "Puerto Romoto :" +puertoh);
-                out.println("<br>"
-                        + "<hr>"
-                        + "<br>"
-                        + "<a href='index.html'>Regresar a la pagina principal</a>");
-                out.println("</body>");
-                out.println("</html>");
-            }catch(Exception e){
-                
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Registro No Exitosos, vuelva a intentarlo</h1>"
-                        + "<a href='index.html'>Regresar a la pagina principal</a>"
-                        + "<br>"
-                        + "<a href='Consultar'>Consultar Tabla General de Usuario</a>");
-                out.println("</body>");
-                out.println("</html>");
-                
-                System.out.println("No se registro en la tabla");
-                System.out.println(e.getMessage());
-                System.out.println(e.getStackTrace());
-            }
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -187,7 +104,6 @@ public class Registro extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
     }
 
     /**
@@ -199,11 +115,60 @@ public class Registro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            //para eliminar necesitamos obtener el id
+            
+            int id;
+            
+            id = Integer.parseInt(request.getParameter("ideliminar"));
+            
+            //preparo mi sentencia
+            //delete from tabla where atributo = valor
+            
+            String q = "delete from mregistro where id_usu = "+id+";";
+            
+            
+            
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Eliminar</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            
+            
+            try{
+                
+                set.executeUpdate(q);
+                System.out.println("Registro eliminado");
+                out.println("<h1>Usuario Eliminado</h1>");
+                //set.close();
+            }catch(Exception e){
+                out.println("<h1>Usuario No Eliminado</h1>");
+                System.out.println("No se pudo eliminar el usuario");
+                System.out.println(e.getMessage());
+                System.out.println(e.getStackTrace());
+             
+            }
+           
+            
+            
+            out.println("<br>"
+                    + "<hr>"
+                    + "<br>"
+                    + "<a href='index.html'>Regresar a la pagina principal</a>"
+                    + "<br>"
+                    + "<br>"
+                    + "<a href='Consultar'>Consultar Tabla General de Usuarios</a>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
-
+    
     /**
      * Returns a short description of the servlet.
      *
@@ -212,6 +177,7 @@ public class Registro extends HttpServlet {
     
     public void destroy(){
         try{
+            set.close();
             con.close();
         }catch(Exception e){
             super.destroy();

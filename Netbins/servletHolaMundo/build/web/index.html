@@ -6,43 +6,92 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Registro de Usuarios</title>
+            <title>Registro de usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./JS/validacionInfo.js" ></script>
     </head>
     <body>
-        <div class="container" >
+        <div class="container">
             
             <div class="containerRegistro">
                 
-                <form name="formulario" method="post" 
-                  action="Registro">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" >
-                <br>
-                <label>Apellido Paterno:</label>
-                <input type="text" name="appat" >
-                <br>
-                <label>Apellido Materno:</label>
-                <input type="text" name="appmat" >
-                <br>
-                <label>Edad:</label>
-                <input type="number" name="edad" min="01" max="99" size="2" >
-                <br>
-                <label>Correo:</label>
-                <input type="email" name="correo" >
-                <br>
-                <input type="submit" value="Registro de Usuarios" >
-                <input type="reset" value="Borrar Registro" >
-            </form>
+                <hr>
+                <h2>Registro de Usuario</h2>
+                <form name="formulario" method="get"
+                    action="Registro">
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" >
+                    <br>
+                    <label>Apellido Paterno:</label>
+                    <input type="text" name="appat" >
+                    <br>
+                    <label>Apellido Paterno:</label>
+                    <input type="text" name="appmat">
+                    <br>
+                    <label>Edad:</label>
+                    <input type="number" name="edad" min="01" max="99" size="2">
+                    <br>
+                    <label>Correo</label>
+                    <input type="email" name="correo">
+                    <br>
+                    <br>
+                    <input type="submit" value="Registrar de Usuario">
+                    <input type="reset" value="Borrar Registro">
+                </form> 
             </div>
-            
-            <div class="containerConsulta" >
-                <label>Consultar Tabla de Usuarios</label>
+           
+            <hr>
+            <div class="containerConsulta">
+                
+                
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <input type="submit" value="Consultar Tabla de Usuarios" >
+                </form>
             </div>
-            
-            
-            
+            <br>
+            <hr>
+            <div class="containerEliminar">
+                <br>
+              
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <label>Eliminar</label>
+                    <input type="number" name="ideliminar">
+                    <br>
+                    <br>
+                    <input type="submit" value="Eliminar Usuario">
+                </form>
+            </div>
+            <br>
+            <hr>
+            <div class="containerActualizar">
+                <br>
+                
+                <form method="post" name="actualizarregistro" action="Actualizar">
+                    <label>Actualizar</label>
+                    <input type="number" name="idactualizar">
+                    <br>
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre_a">
+                        <br>
+                        <label>Apellido Paterno:</label>
+                        <input type="text" name="appat_a" >
+                        <br>
+                        <label>Apellido Paterno:</label>
+                        <input type="text" name="appmat_a" >
+                        <br>
+                        <label>Edad:</label>
+                        <input type="number" name="edad_p" min="01" max="99" size="2" >
+                        <br>
+                        <label>Correo</label>
+                        <input type="email" name="correo_a" >
+                        <br>
+                    <br>
+                    <br>
+                    <input type="submit" value="Actualizar Usuario">
+                    <input type="reset" value="Borrar Datos" >
+                </form>
+            </div>
         </div>
     </body>
 </html>

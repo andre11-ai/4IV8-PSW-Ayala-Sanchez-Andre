@@ -27,7 +27,7 @@ import javax.servlet.ServletConfig;
  *
  * @author demon
  */
-public class Registro extends HttpServlet {
+public class Actualizar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -94,84 +94,61 @@ public class Registro extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            String nom, appat, apmat, correo, ip, iph;
-            int edad, puerto, puertoh;
-            
-            nom = request.getParameter("nombre");
-            appat = request.getParameter("appat");
-            apmat = request.getParameter("appmat");
-            correo = request.getParameter("correo");
-            
-            edad = Integer.parseInt(request.getParameter("edad"));
-            
-            ip = request.getLocalAddr();
-            puerto = request.getLocalPort();
-            
-            iph = request.getRemoteAddr();
-            puertoh = request.getRemotePort();
-            
-            //insert into  nombre_tabla(definicion_atributo, definicion_atributo, ...);
-            //values ("valores_cadena", valores_numericos, .....);
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet Actualizar</title>");            
+            out.println("</head>");
+            out.println("<body>"
+                    + "<h1>Actualización de Usuario</h1>");
+               
+            String nom, appat, apmat, correo;
+            int edad, id;            
+
+            nom = request.getParameter("nombre_a");   
+            appat = request.getParameter("appat_a");
+            apmat = request.getParameter("appmat_a");
+            correo = request.getParameter("correo_a");
+            id = Integer.parseInt(request.getParameter("idactualizar"));             
+            edad = Integer.parseInt(request.getParameter("edad_p"));
             
             try{
+
+               String q = "UPDATE mregistro "
+                        + "SET nom_usu = '"+nom+"', appat_usu = '"+appat+"', apmat_usu = '"+apmat+"', edad_usu = "+edad+", correo_usu = '"+correo+"' "
+                        + "WHERE id_usu ="+id+" ;";
                 
-                String q = "insert into Mregistro "
-                        + "(nom_usu, appat_usu, apmat_usu, edad_usu, correo_usu)"
-                        + "values ('"+nom+"', '"+appat+"', '"+apmat+"', "+edad+", '"+correo+"')";
-                
+
                 set.executeUpdate(q);
                 
-                System.out.println("Registro exitoso");
-                
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
-                out.println("</head>");
-                out.println("<body>"
-                        + "<h1>Registro Exitosos</h1>"
-                        + "Tu nombre es: " + nom);
-                out.print("<br>"
-                        + "Tu apellido paterno es: " + appat
-                        + "<br>"
-                        + "Tu apellido materno es: " + apmat
-                        + "<br>"
-                        + "Tu edad es: " + edad
-                        + "<br>"
-                        + "Tu correo electronico es: " + correo);
-                 out.println("<br>"
-                        + "IP local :" + ip
-                        + "<br>"
-                        + "Puerto Local :" + puerto
-                        + "<br>"
-                        + "IP Remota :" +iph
-                        + "<br>"
-                        + "Puerto Romoto :" +puertoh);
+               out.println("Tu nombre actualizado es: " + nom
+                    + "<br>"
+                    + "Tu apellido paterno actualizado es: " + appat
+                    + "<br>"
+                    + "Tu apellido materno actualizado es: " + apmat
+                    + "<br>"
+                    + "Tu edad actualizada es: " +edad
+                    + "<br>"
+                    + "Tu correo electronico actualizado es:  "+correo);
                 out.println("<br>"
-                        + "<hr>"
-                        + "<br>"
-                        + "<a href='index.html'>Regresar a la pagina principal</a>");
-                out.println("</body>");
-                out.println("</html>");
+                        + "<h1>Registro Exitoso</h1>"); 
+              
             }catch(Exception e){
-                
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet Registro</title>");            
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Registro No Exitosos, vuelva a intentarlo</h1>"
-                        + "<a href='index.html'>Regresar a la pagina principal</a>"
-                        + "<br>"
-                        + "<a href='Consultar'>Consultar Tabla General de Usuario</a>");
-                out.println("</body>");
-                out.println("</html>");
-                
-                System.out.println("No se registro en la tabla");
+                out.println("<h1>Usuario No Actulaizado</h1>");
+                System.out.println("No se pudo actualizar el usuario");
                 System.out.println(e.getMessage());
                 System.out.println(e.getStackTrace());
+             
             }
+           
+            
+            
+            out.println("<br>"
+                    + "<a href='index.html'>Regresar a la pagina principal</a>"
+                    + "<br>"
+                    + "<a href='Consultar'>Consultar Tabla General de Usuarios</a>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
@@ -185,6 +162,7 @@ public class Registro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
@@ -199,19 +177,25 @@ public class Registro extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
+    
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
+    
     /**
      * Returns a short description of the servlet.
      *
      * @return a String containing servlet description
      */
+    @Override
     
     public void destroy(){
         try{
+            rs.close();
+            set.close();
             con.close();
         }catch(Exception e){
             super.destroy();
@@ -219,7 +203,6 @@ public class Registro extends HttpServlet {
         }
     }
     
-    @Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
