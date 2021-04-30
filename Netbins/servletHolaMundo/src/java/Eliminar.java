@@ -136,7 +136,8 @@ public class Eliminar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Eliminar</title>");            
+            out.println("<title>Servlet Eliminar</title>"
+             + "<link rel=\"stylesheet\" href=\"./CSS/Animacion.css\">");            
             out.println("</head>");
             out.println("<body>");
             

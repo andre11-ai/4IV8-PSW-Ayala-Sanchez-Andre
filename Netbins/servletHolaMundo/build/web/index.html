@@ -10,18 +10,73 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="./JS/validacionInfo.js" ></script>
+        <link rel="stylesheet" href="./CSS/Animacion.css">
     </head>
     <body>
-        <div class="container">
+       <header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				
+			</div>
+			<nav class="menu">
+				
+				<a href="/Curriculum/Curriculum.html">Curriculum</a>
+				<a href="/Formulario.html">Formulario</a>
+                <a href="/Hobbies/Hobbies.html">Hobbies</a>
+                <a href="/overmenucolores.html">Over Colores</a>
+				
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--	--------------->
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+            <h2 style="color: white;">Problemas</h2>
+            <a href="#">
+              Aun no hay mas paginas
+            </a>
             
-            <div class="containerRegistro">
+		</nav>
+		<label for="btn-menu">✖️</label>
+	</div>
+</div>
+
+
+    <section>
+
+
+        <article class="un">
+
+            <div class="texto" style="color:#fffff;">
+                <div class="box"> 
+                   
+             
+                </div>
+               
+              <div class="container">
+            
+             <div class="containerRegistro">
                 
-                <hr>
+                
                 <h2>Registro de Usuario</h2>
+                
                 <form name="formulario" method="get"
                     action="Registro">
-                    <label>Nombre:</label>
-                    <input type="text" name="nombre" >
+                
+                    <br>
+                  
+                        
+                          <label>Nombre:</label>
+                        
+                     
+                         <input type="text" name="nombre" >
+                     
                     <br>
                     <label>Apellido Paterno:</label>
                     <input type="text" name="appat" >
@@ -38,22 +93,25 @@ and open the template in the editor.
                     <br>
                     <input type="submit" value="Registrar de Usuario">
                     <input type="reset" value="Borrar Registro">
+                    <br>
+               
                 </form> 
             </div>
            
-            <hr>
+            
             <div class="containerConsulta">
                 
-                
+                <br>
                 <form method="get" name="consultarregistro" action="Consultar">
                     <input type="submit" value="Consultar Tabla de Usuarios" >
                 </form>
             </div>
             <br>
-            <hr>
+            
             <div class="containerEliminar">
                 <br>
-              
+                <h2>Eliminar</h2>
+                <br>
                 <form method="post" name="formularioeliminar" action="Eliminar">
                     <label>Eliminar</label>
                     <input type="number" name="ideliminar">
@@ -63,12 +121,14 @@ and open the template in the editor.
                 </form>
             </div>
             <br>
-            <hr>
+           
             <div class="containerActualizar">
                 <br>
                 
                 <form method="post" name="actualizarregistro" action="Actualizar">
-                    <label>Actualizar</label>
+                    <h2>Actualizar</h2>
+                    <br>
+                    <label>Id</label>
                     <input type="number" name="idactualizar">
                     <br>
                         <label>Nombre:</label>
@@ -93,5 +153,12 @@ and open the template in the editor.
                 </form>
             </div>
         </div>
+            </div>
+      
+               
+
+    </section>
+
+     
     </body>
 </html>

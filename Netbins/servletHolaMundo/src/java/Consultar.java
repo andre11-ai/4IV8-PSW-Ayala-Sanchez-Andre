@@ -97,7 +97,8 @@ public class Consultar extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Consultar</title>");            
+            out.println("<title>Servlet Consultar</title>"
+             + "<link rel=\"stylesheet\" href=\"./CSS/Animacion.css\">");                
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Tabla General de Usuarios</h1>");
